@@ -1,0 +1,42 @@
+General Notes for File Handling in Python 
+
+Python has several functions for creating, reading, updating, and deleting files.
+
+The open() function takes two parameters; filename, and mode.
+
+There are four different methods (modes) for opening a file:
+
+"r" - Read - Default value. Opens a file for reading, error if the file does not exist
+
+"a" - Append - Opens a file for appending, creates the file if it does not exist
+
+"w" - Write - Opens a file for writing, creates the file if it does not exist
+
+"x" - Create - Creates the specified file, returns an error if the file exists
+
+"t" - Text - Default value. Text mode
+
+"b" - Binary - Binary mode (e.g. images)
+
+"a" - Append - will append to the end of the file
+
+"w" - Write - will overwrite any existing content
+
+readline() :return one line by using the readline() method:
+
+Syntax
+f = open("demofile.txt") #open a file for reading
+
+Example
+f = open("demofile.txt", "r")
+print(f.read())    #opeining demofile.txt in read mode that returns whole content
+print(f.read(5))   #returns first 5 character 
+
+Creating empty file
+
+f = open("myfile.txt", "x")
+
+delete file
+
+import os
+os.remove("demofile.txt")
