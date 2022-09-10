@@ -5,8 +5,30 @@ change an existing email address, and delete an existing name and email address.
 The program should pickle the dictionary and save it to a file when the user exits the program. 
 Each time the program starts, it should retrieve the dictionary from the file and unpickle it.
 """
-import pickle
+""""
+solution boilerplate
+dict={
+    "name":"pradip",
+    "email":"pradip@gmail.com"
+}
+print(dict)
+
+#to add
+dict["shyam"]="shyam@gmail.com"
+
+print(dict)
+to update
+dict["shyam"]="shyam1@gmail.com"
+
+print(dict)
+
+to delete
+del dict["shyam"]
+
+print(dict)
+"""
 #from curses.ascii import isdigit
+import pickle
 VIEW_ALL_CONTACTS = 1
 VIEW_A_CONTACTS = 2
 ADD_A_CONTACTS = 3
@@ -181,7 +203,6 @@ def unpickleAndRead(contactsFile):
         inputFile.close()
 
     return contacts
-
 
     # call method
 main()
