@@ -1,4 +1,3 @@
-
 def display(a, b):
     yield a
     yield b
