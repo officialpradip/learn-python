@@ -16,10 +16,14 @@ class Employee():
     def increment(self):
         self.pay = self.pay*Employee.growth
 
+    @classmethod
+    def raise_amount(cls, amount):
+        cls.growth = amount
+
 
 emp1 = Employee("Ram", "Karki", 100000)
 emp2 = Employee("Ram", "Karki", 100000)
-# emp2 = Employee()
+Employee.raise_amount(1.5)
 print(emp1.__dict__)
 print(emp1.email)
 print(emp1.fullname())
